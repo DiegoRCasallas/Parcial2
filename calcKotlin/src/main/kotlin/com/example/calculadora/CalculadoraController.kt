@@ -20,7 +20,7 @@ class CalculadoraController {
     }
     fun insertarCalv(event: ActionEvent) {
         val boton = event.source as Button
-        pantalla.text += "👴🏻"
+        pantalla.text += "👴"
     }
 
     // Método para manejar operadores aritméticos (+, -, *, /)
