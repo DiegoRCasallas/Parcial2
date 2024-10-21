@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.calculadora.CalculadoraController"
+      spacing="10"
+      >
+
+    <!-- Pantalla de la calculadora -->
+    <TextField fx:id="pantalla" editable="false" prefHeight="60" style="-fx-font-size: 24;" />
+
+    <!-- Contenedor de botones -->
+    <GridPane hgap="10" vgap="10" style="-fx-font-size: 18;">
+
+        <!-- Primera fila: Números y operaciones aritméticas -->
+        <Button text="7" GridPane.rowIndex="0" GridPane.columnIndex="0" onAction="#insertarNumero"/>
+        <Button text="8" GridPane.rowIndex="0" GridPane.columnIndex="1" onAction="#insertarNumero"/>
+        <Button text="9" GridPane.rowIndex="0" GridPane.columnIndex="2" onAction="#insertarNumero"/>
+        <Button text="/" GridPane.rowIndex="0" GridPane.columnIndex="3" onAction="#manejarOperacionAritmetica"/>
+        <Button text="(" onAction="#insertarNumero" GridPane.rowIndex="0" GridPane.columnIndex="4" />
+
+        <!-- Segunda fila -->
+        <Button text="4" GridPane.rowIndex="1" GridPane.columnIndex="0" onAction="#insertarNumero"/>
+        <Button text="5" GridPane.rowIndex="1" GridPane.columnIndex="1" onAction="#insertarNumero"/>
+        <Button text="6" GridPane.rowIndex="1" GridPane.columnIndex="2" onAction="#insertarNumero"/>
+        <Button text="*" GridPane.rowIndex="1" GridPane.columnIndex="3" onAction="#manejarOperacionAritmetica"/>
+        <Button text=")" onAction="#insertarNumero" GridPane.rowIndex="1" GridPane.columnIndex="4" />
+        <!-- Tercera fila -->
+        <Button text="1" GridPane.rowIndex="2" GridPane.columnIndex="0" onAction="#insertarNumero"/>
+        <Button text="2" GridPane.rowIndex="2" GridPane.columnIndex="1" onAction="#insertarNumero"/>
+        <Button text="3" GridPane.rowIndex="2" GridPane.columnIndex="2" onAction="#insertarNumero"/>
+        <Button text="-" GridPane.rowIndex="2" GridPane.columnIndex="3" onAction="#manejarOperacionAritmetica"/>
+
+        <!-- Cuarta fila -->
+        <Button text="0" GridPane.rowIndex="3" GridPane.columnIndex="0" onAction="#insertarNumero"/>
+        <Button text="." GridPane.rowIndex="3" GridPane.columnIndex="1" onAction="#insertarNumero"/>
+        <Button text="=" GridPane.rowIndex="3" GridPane.columnIndex="2" onAction="#calcularResultado"/>
+        <Button text="+" GridPane.rowIndex="3" GridPane.columnIndex="3" onAction="#manejarOperacionAritmetica"/>
+        <Button text="Borrar" onAction="#borrarPantalla" GridPane.rowIndex="3" GridPane.columnIndex="4" />
+        <!-- Quinta fila: Funciones científicas -->
+        <Button text="sin" GridPane.rowIndex="4" GridPane.columnIndex="0" onAction="#manejarFuncionTrigonometrica"/>
+        <Button text="cos" GridPane.rowIndex="4" GridPane.columnIndex="1" onAction="#manejarFuncionTrigonometrica"/>
+        <Button text="tan" GridPane.rowIndex="4" GridPane.columnIndex="2" onAction="#manejarFuncionTrigonometrica"/>
+        <Button text="√" GridPane.rowIndex="4" GridPane.columnIndex="3" onAction="#calcularRaiz"/>
+
+        <!-- Sexta fila: Potencias y logaritmos -->
+        <Button text="x^y" GridPane.rowIndex="5" GridPane.columnIndex="0" onAction="#manejarPotencia"/>
+        <Button text="log" GridPane.rowIndex="5" GridPane.columnIndex="1" onAction="#calcularLogaritmoBase10"/>
+        <Button text="ln" GridPane.rowIndex="5" GridPane.columnIndex="2" onAction="#calcularLogaritmoNatural"/>
+        <Button text="exp" GridPane.rowIndex="5" GridPane.columnIndex="3" onAction="#calcularExponencial"/>
+
+        <!-- Séptima fila: Funciones de memoria -->
+        <Button text="M+" GridPane.rowIndex="6" GridPane.columnIndex="0" onAction="#memoriaGuardar"/>
+        <Button text="MR" GridPane.rowIndex="6" GridPane.columnIndex="1" onAction="#memoriaRecuperar"/>
+        <Button text="M-" GridPane.rowIndex="6" GridPane.columnIndex="2" onAction="#memoriaLimpiar"/>
+        <Button text="👍" GridPane.rowIndex="6" GridPane.columnIndex="3" onAction="#insertarCalv"/>
+
+    </GridPane>
+
+</VBox>
