@@ -7,8 +7,8 @@ class CalculadoraCientifica : Calculadora() {
 
     // Funciones trigonométricas
     fun seno(angulo: Double): Double = sin(Math.toDegrees(angulo))
-    fun coseno(angulo: Double): Double = cos(Math.toDegrees(angulo))
-    fun tangente(angulo: Double): Double = tan(Math.toDegrees(angulo))
+    fun coseno(angulo: Double): Double = cos(Math.toRadians(angulo))
+    fun tangente(angulo: Double): Double = tan(Math.toRadians(angulo))
 
     // Potencias y raíces
     fun potencia(base: Double, exponente: Double): Double = base.pow(exponente)
