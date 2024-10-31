@@ -28,7 +28,7 @@ Para ejecutar este proyecto, asegúrate de tener instalado Python (3.7 o superio
 2. Navega a la carpeta del proyecto:
 
    ```bash
-   cd calculadora_agentes
+   cd calcMesa
    ```
 
 3. Instala las dependencias necesarias:

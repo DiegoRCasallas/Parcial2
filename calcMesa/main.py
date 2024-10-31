@@ -1,4 +1,4 @@
-from calculator.model import CalculatorModel
+from calculadora.model import CalculatorModel
 
 if __name__ == "__main__":
     calculator = CalculatorModel()
